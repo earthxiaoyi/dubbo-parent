@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration 
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 开启缓存支持 -->
+		<setting name="cacheEnabled" value="false" />
+	</settings>
+	<!-- 命名空间 -->
+	<!-- <typeAliases> <typeAlias alias="MybatisRedisCache" type="cn.springmvc.util.MybatisRedisCache" 
+		/> </typeAliases> -->
+
+	<!-- 映射map -->
+	<mappers>
+	</mappers>
+</configuration>

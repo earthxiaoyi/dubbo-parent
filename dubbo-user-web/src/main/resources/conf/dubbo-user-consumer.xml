@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd  
+       http://code.alibabatech.com/schema/dubbo  
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	<!-- 服务提供者名字 -->
+	<dubbo:application name="dubbo-user-consumer" />
+	<!-- zookeeper 注册中心 -->
+	<dubbo:registry address="zookeeper://192.168.233.131:2181" check="false"/>
+	<!-- 要暴露的服务接口 -->
+	<dubbo:reference interface="com.dubbo.user.service.TestRegistryService"
+		id="TestRegistryService"></dubbo:reference>
+	
+	<!-- 解决web服务使用注解依赖注入，启动报错的问题 -->
+	<dubbo:consumer check="false"/>
+</beans>
